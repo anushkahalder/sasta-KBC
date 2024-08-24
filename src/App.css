@@ -1,0 +1,354 @@
+/* General Styles */
+.quiz-container {
+  background-color: #fdfbfb;
+  margin: 5%;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  flex-direction: column; /* Stack content vertically on smaller screens */
+}
+
+.start-game-btn {
+  background-color: #ffeb3b;
+  position: absolute;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.start-game-btn:hover {
+  background-color: #0a0a0a;
+  color: #fcf7f7;
+}
+
+.reset-btn {
+  position: absolute;
+  top: 10px; 
+  right: 10px;  
+  background-color: #8d040f;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #ff6b81;
+  color: #000;
+}
+
+.question-section {
+  padding: 20px;
+  color: #080808;
+  width: 100%;
+}
+
+.question-block {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.numeric {
+  font-size: 24px;
+  font-weight: bold;
+  color: #22048f;
+}
+
+.hr-divider {
+  border: 0;
+  height: 1px;
+  background: #444;
+  margin: 10px 0;
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.option {
+  width: 48%;
+  background-color: #fff3f3;
+  color: #0e0d0d;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 79px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px rgba(211, 210, 210, 0.5);
+}
+
+.option:hover {
+  background-color: #f7bcbc;
+}
+
+.option-selected {
+  background-color: #17a2b8;
+}
+
+.option-highlight {
+  background-color: #17a2b8;
+}
+
+.navigation-buttons {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 12px 12px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.prev-btn, .next-btn {
+  background-color: #007bff;  
+  color: #fff;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: #0056b3;
+}
+
+.skip-btn {
+  background-color: #ffc107;  
+  color: #000;
+}
+
+.skip-btn:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+.nav-btn:disabled {
+  background-color: #6c757d; 
+  cursor: not-allowed;  
+  color: #fff;
+}
+
+.end-section {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.submit-btn, .review-btn, .view-all-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.submit-btn:hover, .review-btn:hover, .view-all-btn:hover {
+  background-color: #0056b3;
+}
+
+.review-btn {
+  background-color: #28a745;
+}
+
+.review-btn:hover {
+  background-color: #218838;
+}
+
+.view-all-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.view-all-btn:hover {
+  background-color: #e0a800;
+}
+
+.score-section, .view-all-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.review-block {
+  width: calc(50% - 20px);
+  background-color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.review-question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.review-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.review-section .option {
+  width: calc(45% - 10px);
+  background-color: #444;
+  color: #fff;
+  padding: 2px;
+  border-radius: 28px;
+  cursor: default;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.option.correct-option {
+  background-color: #28a745;
+}
+
+.option.incorrect-option {
+  background-color: #dc3545;
+}
+
+.description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #0c0c0c;
+  background-color: #aee6bb;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.review-section .reset-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 10;
+}
+
+.reset-btn:hover {
+  background-color: #ff6b81;
+  color: #000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .quiz-container {
+    margin: 2%;
+    height: auto; /* Adjust height for small screens */
+    padding: 10px;
+  }
+
+  .navigation-buttons {
+    width: 100%;
+    flex-direction: row; /* Stack buttons vertically on small screens */
+    gap: 5px; /* Reduced gap between buttons */
+    display: flex;
+  }
+
+  .nav-btn {
+    flex: none;
+    width: 30%; /* Full width for buttons on small screens */
+  }
+
+  .options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 15px 0;
+  }
+  
+  .option {
+    width: 88%;
+    background-color: #fff3f3;
+    color: #0e0d0d;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 79px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px rgba(211, 210, 210, 0.5);
+  }
+
+
+  .review-section {
+    flex-direction: column; /* Stack review blocks vertically on small screens */
+  }
+
+  .review-block {
+    width: 100%; /* Full width for review blocks on small screens */
+  }
+
+  .review-options-container {
+    flex-direction: column; /* Stack options vertically on small screens */
+  }
+
+  .review-section .option {
+    width: 100%; /* Full width for options on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .start-game-btn, .reset-btn, .submit-btn, .review-btn, .view-all-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .question-block {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .review-question {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
