@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
 export const fetchQues = createAsyncThunk('fetchQues', async () => {
     const data = await fetch(`${process.env.PUBLIC_URL}/data.json`);
+    console.log(`${process.env.PUBLIC_URL}/data.json`);
     // const data = await fetch(`../src/data.json`);
     const res = await data.json()
     return res;
