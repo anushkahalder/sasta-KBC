@@ -1,9 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
+
 export const fetchQues = createAsyncThunk('fetchQues', async () => {
     console.log(`${process.env.PUBLIC_URL}/data.json`);
-    console.log('sasta-KBC/data.json')
-    const data = await fetch('sasta-KBC/data.json');
+    console.log(`./data.json`)
+    const data = await fetch('./data.json');
 
     // const data = await fetch(`../src/data.json`);
     const res = await data.json()
